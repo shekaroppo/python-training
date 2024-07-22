@@ -11,7 +11,6 @@ while True:
 		guess = int(input("guess the number? 1..20 "))
 		
 		if guess == secret:
-			print(f"bhesh {name}! you guessed it in {guesses} tries.")
 			break
 		elif (guess + 5) <= secret:
 			print("you guessed too low!")
@@ -22,7 +21,9 @@ while True:
 		elif guess > secret:
 			print("you guessed high!")
 			
-	if not guesses < 7:
+	if guess == secret:
+		print(f"bhesh {name}! you guessed it in {guesses} tries.")
+    else:
 	    print("better luck next time {name}! you couldn't guess the number in 7 chances.")
 	
 	again = input("do you want to play again? Yes/No. ")
